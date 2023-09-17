@@ -8,17 +8,18 @@ import com.example.absensimmtcsimulasi.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityRegisterBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        initializedRegisterFirebase()
+        setContentView(binding.root)
+    }
 
+
+    private fun initializedRegisterFirebase() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.TvSignIn.setOnClickListener {
@@ -31,24 +32,31 @@ class RegisterActivity : AppCompatActivity() {
             val email = binding.ETEmailReg.text.toString().trim()
             val password = binding.ETPasswordReg.text.toString().trim()
 
+            println("ini email : $email dan password : $password")
+
             if (nama.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Harus diisi, ga boleh kosong, cukup hati aja yang kosong", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Harus diisi, ga boleh kosong, cukup hati aja yang kosong",
+                    Toast.LENGTH_LONG
+                ).show()
 
             } else {
-
                 // registrasi dengan Firebase
-                firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
-
-                    if (task.isSuccessful) {
-
+                firebaseAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
                             Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_LONG).show()
                             val moveIntentLog = Intent(this, LoginActivity::class.java)
                             startActivity(moveIntentLog)
                             finish()
 
                         } else {
-
-                            Toast.makeText(this, "Gagal melakukan registrasi. Periksa kembali email dan password Anda.", Toast.LENGTH_LONG).show()
+                            Toast.makeText(
+                                this,
+                                "Gagal melakukan registrasi. Periksa kembali email dan password Anda.",
+                                Toast.LENGTH_LONG
+                            ).show()
                         }
                     }
             }
