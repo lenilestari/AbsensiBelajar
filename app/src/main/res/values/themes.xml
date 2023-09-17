@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AbsensiMMTCSimulasi" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/warna1</item>
+        <item name="colorOnPrimary">@color/warna2</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/warna3</item>
+        <item name="colorOnSecondary">@color/warna4</item>
+    </style>
+
+    <style name="Theme.AbsensiMMTCSimulasi" parent="Base.Theme.AbsensiMMTCSimulasi" />
+</resources>

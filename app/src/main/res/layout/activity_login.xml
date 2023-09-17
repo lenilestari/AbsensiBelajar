@@ -1,0 +1,88 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_1"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:src="@drawable/img1" />
+
+    <EditText
+        android:id="@+id/ET_EmailLogin"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/img1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="15dp"
+        android:layout_weight="1"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp"
+        android:ems="10"
+        android:hint="Email"
+        android:background="@drawable/kotak_1"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="8dp" />
+
+    <EditText
+        android:id="@+id/ET_PasswordLogin"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ET_EmailLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/kotak_1"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="8dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Login"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ET_PasswordLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/btn_Login"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't Have an Account?"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/TV_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Sign Up"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

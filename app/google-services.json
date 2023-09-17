@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "456250531951",
+    "project_id": "absensisimulasi",
+    "storage_bucket": "absensisimulasi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456250531951:android:694b2497a58cd63642ad9a",
+        "android_client_info": {
+          "package_name": "com.com.budyfriend_code.login.firebaseauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX_Fd8txypbczF5ZuBdgaf6WxnM19FMd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456250531951:android:0513d2c0900cdd8d42ad9a",
+        "android_client_info": {
+          "package_name": "com.example.absensimmtcsimulasi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX_Fd8txypbczF5ZuBdgaf6WxnM19FMd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

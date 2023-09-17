@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_1"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/img3" />
+
+    <EditText
+        android:id="@+id/ET_NamaReg"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/kotak_1"
+        android:drawableLeft="@drawable/ic_people"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Nama"
+        android:paddingLeft="15dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/ET_PasswordReg"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/kotak_1"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="8dp" />
+
+    <EditText
+        android:id="@+id/ET_EmailReg"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/kotak_1"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="8dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Register"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button"
+        android:text="REGISTER"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Have Account?"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/Tv_SignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
