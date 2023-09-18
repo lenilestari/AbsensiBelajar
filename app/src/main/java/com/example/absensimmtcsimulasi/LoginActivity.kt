@@ -36,8 +36,16 @@ class LoginActivity : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
+
+                            val user = firebaseAuth.currentUser
+                            val userName = user?.displayName
+
                             val moveIntentReg = Intent(this, Menu::class.java)
+
+                            moveIntentReg.putExtra(Menu.EXTRA_NAME, userName)
                             startActivity(moveIntentReg)
+
+
                         } else {
                             Toast.makeText(this, "Gagal melakukan login. Periksa kembali email dan password Anda", Toast.LENGTH_LONG).show()
 

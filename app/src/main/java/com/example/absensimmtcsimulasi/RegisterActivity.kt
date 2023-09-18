@@ -14,10 +14,9 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
-        initializedRegisterFirebase()
         setContentView(binding.root)
+        initializedRegisterFirebase()
     }
-
 
     private fun initializedRegisterFirebase() {
         firebaseAuth = FirebaseAuth.getInstance()
@@ -46,6 +45,8 @@ class RegisterActivity : AppCompatActivity() {
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
+                            // Registrasi berhasil, simpan nama pengguna di SharedPreferences
+                            saveUsernameInSharedPreferences(nama)
                             Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_LONG).show()
                             val moveIntentLog = Intent(this, LoginActivity::class.java)
                             startActivity(moveIntentLog)
@@ -62,4 +63,12 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun saveUsernameInSharedPreferences(username: String) {
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("username", username)
+        editor.apply()
+    }
 }
+
