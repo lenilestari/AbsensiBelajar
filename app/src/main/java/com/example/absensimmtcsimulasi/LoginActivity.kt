@@ -3,6 +3,7 @@ package com.example.absensimmtcsimulasi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.absensimmtcsimulasi.databinding.ActivityLoginBinding
 import com.google.firebase.FirebaseApp
@@ -35,15 +36,19 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
+                        val user = firebaseAuth.currentUser
+                        val userName = user?.displayName
 
-                            val user = firebaseAuth.currentUser
-                            val userName = user?.displayName
+                        Log.d("Login", "Data pengguna displayName masuk")
+
+
+                        if (task.isSuccessful) {
 
                             val moveIntentReg = Intent(this, Menu::class.java)
 
                             moveIntentReg.putExtra(Menu.EXTRA_NAME, userName)
                             startActivity(moveIntentReg)
+                            finish()
 
 
                         } else {

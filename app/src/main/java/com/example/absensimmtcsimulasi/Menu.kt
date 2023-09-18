@@ -1,6 +1,7 @@
 package com.example.absensimmtcsimulasi
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -38,6 +39,8 @@ class Menu : AppCompatActivity() {
 
         val text = "$name"
         tvDataReceived.text = text
+
+        Log.d("Menu", "Data Pengguna")
 
         bottomNavigationView = binding.navViewBottom
 
