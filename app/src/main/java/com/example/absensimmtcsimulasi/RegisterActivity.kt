@@ -64,10 +64,10 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveUsernameInSharedPreferences(username: String) {
-        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+    private fun saveUsernameInSharedPreferences(nama: String) {
+        val sharedPreferences = getSharedPreferences("MY_PRE", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        editor.putString("username", username)
+        editor.putString("NAMA", nama)
         editor.apply()
     }
 }

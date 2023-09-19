@@ -17,6 +17,7 @@ class Menu : AppCompatActivity() {
 
     companion object {
         const val EXTRA_NAME = "extra_name"
+        const val EXTRA_NAME_SD = "extra_name_sd"
 
     }
 
@@ -34,11 +35,19 @@ class Menu : AppCompatActivity() {
         setContentView(binding.root)
 
         val tvDataReceived : TextView = findViewById(R.id.tv_data_received)
+        val tvDataReceivedSD : TextView = findViewById(R.id.tv_data_received_SD)
 
-        val name = intent.getStringExtra(EXTRA_NAME)
+        val sharedPreferences = getSharedPreferences("MY_PRE", MODE_PRIVATE)
+        val username = sharedPreferences.getString("NAMA", "").toString()
+        tvDataReceived.text = "$username"
 
-        val text = "$name"
-        tvDataReceived.text = text
+//        val name = intent.getStringExtra(EXTRA_NAME)
+        val nameSD = intent.getStringExtra(EXTRA_NAME_SD)
+
+        val textSD = "$nameSD"
+//        val text = "$name"
+//        tvDataReceived.text = text
+        tvDataReceivedSD.text = textSD
 
         Log.d("Menu", "Data Pengguna")
 

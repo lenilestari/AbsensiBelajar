@@ -47,6 +47,7 @@ class LoginActivity : AppCompatActivity() {
                             val moveIntentReg = Intent(this, Menu::class.java)
 
                             moveIntentReg.putExtra(Menu.EXTRA_NAME, userName)
+                            moveIntentReg.putExtra(Menu.EXTRA_NAME_SD, "Selamat Datang")
                             startActivity(moveIntentReg)
                             finish()
 
