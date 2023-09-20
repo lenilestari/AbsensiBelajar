@@ -98,16 +98,9 @@
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text="Ambil foto"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
 
                         <FrameLayout
+                            android:id="@+id/img_bitmap"
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:background="@drawable/border_line_dotted">
@@ -120,7 +113,20 @@
                                 android:adjustViewBounds="true"
                                 android:src="@drawable/ic_photo_camera" />
 
+
                         </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/AmbilFoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="Klik untuk ambil foto"
+                            android:textColor="@color/warna2"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
 
                     </LinearLayout>
 
@@ -225,7 +231,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Keterangan"
+                            android:text="Laporan Harian"
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -250,14 +256,14 @@
 
             <androidx.appcompat.widget.AppCompatButton
 
-                android:id="@+id/btn_AmbilFoto"
+                android:id="@+id/btn_Masuk"
                 android:layout_width="330dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ET_PasswordLogin"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:text="AMBIL FOTO"
+                android:text="MASUK"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button" />
 

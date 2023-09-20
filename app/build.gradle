@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-parcelize'
 //    id 'kotlin-kapt'
 }
 
@@ -36,7 +37,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
 }
 
 dependencies {
@@ -51,8 +51,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation 'com.google.firebase:firebase-firestore:23.0.0'
 
+    // firebase dkk
+    implementation 'com.google.firebase:firebase-firestore:23.0.0'
     implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
@@ -60,6 +61,7 @@ dependencies {
 
     implementation 'com.soundcloud.android:android-crop:1.0.1@aar'
 
+    // cardview
     implementation 'androidx.cardview:cardview:1.0.0'
 
     // untuk load gambar
@@ -67,5 +69,29 @@ dependencies {
 
     // load circle
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // dapatkan lokasi google maps
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+    // Lifecycle Components
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.4.1'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+
+    // dexternya
+    implementation 'com.karumi:dexter:6.2.2'
+
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+
+    // Rx Java
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
 }
 
