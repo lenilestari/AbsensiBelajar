@@ -1,10 +1,14 @@
 package com.example.absensimmtcsimulasi.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.fragment.app.FragmentManager
+import com.example.absensimmtcsimulasi.AbsenMasuk
 import com.example.absensimmtcsimulasi.R
 
 
@@ -14,8 +18,17 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }
 
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+
+        val pindahActivityAbsenMasuk = view.findViewById<ImageView>(R.id.AbsenMasuk)
+        pindahActivityAbsenMasuk.setOnClickListener {
+
+            val intentpindahAbsenMasuk = Intent(activity, AbsenMasuk::class.java)
+            startActivity(intentpindahAbsenMasuk)
+        }
+
+        return view
+    }
 }
